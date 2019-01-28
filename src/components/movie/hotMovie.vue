@@ -40,7 +40,6 @@ export default {
         count:10
       }
       }).then(res =>{
-        console.log(res.data.subjects)
         this.hotMovies = res.data.subjects
       }).catch(e => console.log(e))
     },
