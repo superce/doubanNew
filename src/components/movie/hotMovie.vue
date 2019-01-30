@@ -5,24 +5,21 @@
       <router-link to=''>更多</router-link>
     </div>
     <ul>
-      <li v-for="hot in hotMovies">
-        <router-link to=''>
-          <img :src="hot.images.small" alt="">
-          <span class="title">{{ hot.title }}</span>
-          <div class="rank">
-            <!-- <span class="full" v-for="h in fullStar(hot)"></span> -->
-            <span class="full star" v-for="h in parseInt(hot.rating.stars/10)"></span>
-            <span class="gray star" v-for="gray in (5 - parseInt(hot.rating.stars/10))"></span>
-            <span class="star">{{ hot.rating.average }}</span>
-          </div>
-        </router-link>
+      <li v-for="(hot,i) in hotMovies" :key="i" @click="toPage(hot)">
+        <img :src="hot.images.small" alt="">
+        <span class="title">{{ hot.title }}</span>
+        <div class="rank">
+          <Rating v-if="hot.rating" :rating="hot.rating"></Rating>
+        </div>
       </li>
     </ul>
   </div>
 </template>
 <script>
 import axios from 'axios'
+import Rating from '../Rating'
 export default {
+  components: { Rating },
   name:'hotMovie',
   data(){
     return {
@@ -43,12 +40,13 @@ export default {
         this.hotMovies = res.data.subjects
       }).catch(e => console.log(e))
     },
-  },
-  computed:{
-    fullStar(num){
-      let nums = parseInt(num.rating.stars)
-      nums = Math.floor(nums/10)
-      return nums
+  toPage(hot){
+      this.$router.push({
+        path:"/detail",
+        query:{
+          id:hot.id
+        }
+      })
     }
   },
 }

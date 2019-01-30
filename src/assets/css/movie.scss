@@ -9,13 +9,11 @@
       font-size: .8rem;
       font-weight: normal;
     }
-
     a {
       color: #42bd56;
       font-size: .7rem;
     }
   }
-
   ul {
     overflow-x: scroll;
     -webkit-overflow-scrolling: touch;
@@ -26,7 +24,6 @@
       width: 5rem;
       flex-shrink: 0;
       margin-right: .4rem;
-
       .title {
         display: block;
         font-size: $fontSize6;

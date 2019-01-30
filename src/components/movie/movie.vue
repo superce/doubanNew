@@ -1,9 +1,9 @@
 <template>
   <div class="movie-home">
     <hotMovie />
+    <newMovie />
     <freeMovie />
     <findMovie />
-    <newMovie />
   </div>
 </template>
 <script>

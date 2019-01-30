@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <Header />
-    <router-view/>
+    <router-view class="view"/>
   </div>
 </template>
 
@@ -15,6 +15,10 @@ export default {
 }
 </script>
 
-<style>
-
+<style lang='scss'>
+  #app{
+    .view{
+      margin-top: 2.9rem;
+    }
+  }
 </style>
