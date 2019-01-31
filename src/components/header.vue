@@ -28,7 +28,6 @@ export default {
       this.show = true
     },
     close(d){
-      console.log(d)
       this.show = false
     },
     toPage(i){
