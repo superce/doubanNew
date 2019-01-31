@@ -4,41 +4,41 @@
       <router-link tag='li' to='' v-for="(list,i) in lists" :key="i">
         <div class="left">
           <h5>{{ list.title }}</h5>
-          <p>{{ list.content }}</p>
-          <span>{{ list.tag }}</span>
+          <p>{{ list.address }}</p>
+          <span>{{ list.subcategory_name }}</span>
         </div>
         <div class="right">
-          <img :src="list.img" alt="">
+          <img :src="list.image" alt="">
         </div>
       </router-link>
     </ul>
   </div>
 </template>
 <script>
+import axios from 'axios'
 export default {
   name:'homeList',
   data(){
     return {
-      lists:[
-        {
-          title:'春节档科幻电影《流浪地球》北京首映礼免费观影+主创见面会来了！',
-          content:'根据刘慈欣同名科幻小说改编的国产科幻冒险电影《流浪地球》即将',
-          tag:'电影',
-          img:'https://img1.doubanio.com/pview/event_poster/hlarge/public/be56e679c371e7a.jpg'
-        },
-        {
-          title:'春节档科幻电影《流浪地球》北京首映礼免费观影+主创见面会来了！',
-          content:'根据刘慈欣同名科幻小说改编的国产科幻冒险电影《流浪地球》即将',
-          tag:'电影',
-          img:'https://img1.doubanio.com/pview/event_poster/hlarge/public/be56e679c371e7a.jpg'
-        },
-        {
-          title:'春节档科幻电影《流浪地球》北京首映礼免费观影+主创见面会来了！',
-          content:'根据刘慈欣同名科幻小说改编的国产科幻冒险电影《流浪地球》即将',
-          tag:'电影',
-          img:'https://img1.doubanio.com/pview/event_poster/hlarge/public/be56e679c371e7a.jpg'
-        },
-      ]
+      lists:''
+    }
+  },
+  created(){
+    this.getlist()
+  },
+  methods:{
+    getlist(){
+      let homelist = 'api/event/list'
+      axios.get(homelist,{
+      params:{
+        loc:108288,
+        count:10,
+        start:0
+      }
+    }).then(res => {
+      this.lists = res.data.events
+      console.log(res.data.events)
+    }).catch(e => console.log(e))
     }
   }
 }

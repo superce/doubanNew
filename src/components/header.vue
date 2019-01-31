@@ -50,6 +50,7 @@ export default {
 
   @import '@/assets/css/scss.scss';
   .header{
+    width: 100%;
     padding: .5rem 0;
     border-bottom: 1px solid #f3f3f3;
     position: fixed;

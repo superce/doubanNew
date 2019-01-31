@@ -41,13 +41,15 @@ export default {
 }
 .search{
   width:100%;
-  height: 33.35rem;
+  height: 50rem;
   background: #fff;
   position: absolute;
   top: 0;
   left: 0;
   z-index: 99;
   .search-top{
+    width:17.5rem;
+    margin: 0 auto;
     display: flex;
     border-bottom: 1px solid #f3f3f3;
     padding: .5rem 0;
