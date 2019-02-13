@@ -15,7 +15,7 @@ module.exports = {
         target: 'https://api.douban.com/v2',
         changeOrigin: true, //是否跨域
         pathRewrite: {
-          '^/api': ''
+          '^/api': 'http://localhost:8080'
         }
       },
     },
@@ -51,7 +51,7 @@ module.exports = {
     // Paths
     assetsRoot: path.resolve(__dirname, '../dist'),
     assetsSubDirectory: 'static',
-    assetsPublicPath: '/',
+    assetsPublicPath: './',
 
     /**
      * Source Maps

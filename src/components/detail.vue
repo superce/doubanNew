@@ -5,7 +5,7 @@
       <div class="left">
         <div class="rating">
           <Rating v-if="rating" :rating="rating"></Rating>
-          <span class="pl">{{ ratings_count }}</span>
+          <span class="pl">{{ ratings_count }} 人评价</span>
         </div>
         <p>
           {{year}}/<span v-for="(g,i) in genres" :key="i">{{ g }}</span>/{{ countries }}

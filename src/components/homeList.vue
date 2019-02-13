@@ -42,6 +42,7 @@ export default {
   methods:{
     getlist(){
       let homelist = 'api/event/list'
+      // let homeList = 'https://api.douban.com/v2/event/list'
       axios.get(homelist,{
       params:{
         loc:108288,

@@ -4,7 +4,7 @@
       <span>暂无评分</span>
     </template>
     <template v-else>
-      <template v-for="n in full">
+      <template v-for="(n,i) in full">
         <span class="star-full"></span>
       </template>
       <template v-for="n in half">
@@ -49,6 +49,7 @@ export default {
   margin-top: 0.1rem;
   font-size: .6rem;
   color: #aaa;
+  text-align: center;
 }
 
 .star-full {
