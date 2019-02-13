@@ -3,19 +3,19 @@
     <hotMovie />
     <newMovie />
     <freeMovie />
-    <findMovie />
+    <!-- <findMovie /> -->
   </div>
 </template>
 <script>
 import hotMovie from './hotMovie'
 import freeMovie from './freeMovie'
-import findMovie from './findMovie'
+// import findMovie from './findMovie'
 import newMovie from './newMovie'
 export default {
   components:{
     hotMovie,
     freeMovie,
-    findMovie,
+    // findMovie,
     newMovie
   },
   name:'Movie'

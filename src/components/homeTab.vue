@@ -3,7 +3,6 @@
     <div class="tabs">
       <ul>
         <li v-for="(t,i) in tabs" :key="i" @click='toPage(i)'>
-          <!-- <router-link :to='toPage(i)'>{{ t }}</router-link> -->
           {{ t }}
         </li>
       </ul>
@@ -22,12 +21,17 @@ export default {
     toPage(i){
       if(i == 0){
         this.$router.push({
-          path:'/movie'
+          path:'/newmovie'
         })
       }
       if(i == 1){
         this.$router.push({
           path:'/m'
+        })
+      }
+      if(i == 3){
+        this.$router.push({
+          path:'/login'
         })
       }
     }
@@ -54,7 +58,6 @@ export default {
         border-radius: 4px;
         color:$color;
         font-size: .8rem;
-        
       }
     }
   }

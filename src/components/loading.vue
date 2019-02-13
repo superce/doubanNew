@@ -12,12 +12,12 @@ export default {
 </script>
 <style lang="scss" scoped>
 .load{
-  width: 100%;height: 33.35rem;
+  position: fixed;
+  width: 100%;height: 100%;
   background: #fff;
-  position: absolute;
   top: 0;
   left: 0;
-  z-index: 99;
+  z-index: 999;
   .loading{
     width:2rem;height: 2rem;margin: 0 auto;
     position: absolute;

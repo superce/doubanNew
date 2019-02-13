@@ -58,7 +58,7 @@ export default {
       let scrollTop = document.documentElement.scrollTop || window.pageYOffset || document.body.scrollTop //滚动高度
       let wHeight = window.innerHeight  //窗口高度
       let scrollHeight = document.body.scrollHeight  // 内容总高度
-      if(scrollTop + wHeight >= scrollHeight - 100 && this.req == true){
+      if(scrollTop + wHeight >= scrollHeight - 100 && this.req){
         console.log(scrollTop)
         this.req = false
         this.loading = true
