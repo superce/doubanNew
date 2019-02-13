@@ -41,9 +41,9 @@ export default {
   },
   methods:{
     getlist(){
-      let homelist = 'api/event/list'
-      // let homeList = 'https://api.douban.com/v2/event/list'
-      axios.get(homelist,{
+      // let homelist = 'api/event/list'
+      let url = 'https://api.douban.com/v2/event/list'
+      axios.get(url,{
       params:{
         loc:108288,
         count:10,
@@ -63,8 +63,9 @@ export default {
         console.log(scrollTop)
         this.req = false
         this.loading = true
-          let homelist = 'api/event/list'
-          axios.get(homelist,{
+          // let homelist = 'api/event/list'
+          let url = 'https://api.douban.com/v2/event/list'
+          axios.get(url,{
           params:{
             loc:108288,
             count:10,

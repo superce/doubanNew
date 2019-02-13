@@ -33,7 +33,8 @@ export default {
   },
   methods:{
     getHotMovies(){
-      let url = '/api/movie/coming_soon'
+      // let url = '/api/movie/coming_soon'
+      let url = 'https://api.douban.com/v2/movie/coming_soon'
       axios.get(url,{
         params:{
         count:10

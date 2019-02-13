@@ -34,7 +34,8 @@ export default {
   },
   methods:{
     getHotMovies(){
-      let url = '/api/movie/top250'
+      // let url = '/api/movie/top250'
+      let url = 'https://api.douban.com/v2/movie/top250'
       axios.get(url,{
         params:{
         count:10

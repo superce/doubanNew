@@ -58,7 +58,8 @@ export default {
   },
   methods:{
     getDetail(){
-      let getApi = `api/movie/subject/${this.msg}`
+      // let getApi = `api/movie/subject/${this.msg}`
+      let getApi = `https://api.douban.com/v2/movie/subject/${this.msg}`
       axios.get(getApi).then(res => {
         this.showLoading = false
         this.title = res.data.title

@@ -31,7 +31,8 @@ export default {
   },
   methods:{
     getHotMovies(){
-      let url = '/api/movie/in_theaters'
+      // let url = '/api/movie/in_theaters'
+      let url = 'https://api.douban.com/v2/movie/in_theaters'
       axios.get(url,{
         params:{
         count:10

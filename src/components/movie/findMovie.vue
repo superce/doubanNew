@@ -42,7 +42,8 @@ export default {
   },
   methods:{
     findMovies(){
-      let url = '/api/movie/top250'
+      // let url = '/api/movie/top250'
+      let url = 'https://api.douban.com/v2/movie/top250'
       axios.get(url,{
         params:{
           count:10
@@ -60,8 +61,9 @@ export default {
       if(scrollTop + wHeight >= scrollHeight - 100 && this.REQ){
         this.REQ = false
         this.load = true
-          let homelist = 'api/movie/top250'
-          axios.get(homelist,{
+          // let homelist = 'api/movie/top250'
+          let url = 'https://api.douban.com/v2/movie/top250'
+          axios.get(url,{
           params:{
             count:10,
             start:this.start
