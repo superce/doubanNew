@@ -36,6 +36,11 @@ export default new Router({
     {
       path:'/login',
       component:Login
+    },
+    {
+      path:'/book',
+      name:'book',
+      component:() => import('@/components/book/book.vue')
     }
   ]
 })

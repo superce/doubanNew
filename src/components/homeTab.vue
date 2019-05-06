@@ -31,7 +31,7 @@ export default {
       }
       if(i == 3){
         this.$router.push({
-          path:'/login'
+          name:'book'
         })
       }
     }
